@@ -5,6 +5,7 @@ export class Configuration {
     id: string;
     name: string;
     configurationModelId: string;
+    code: string;
     root: ConfigurationFeature;
     linkedMachinesNode: ConfigurationFeature;
     steps: ConfigurationStep[];
@@ -24,7 +25,7 @@ export class Configuration {
     autodeskUrn: string;
     autodeskIntegrationApplicationId: string;
     foreignAutodeskUrns: { [featureModelId: string]: string };
-    conflicts: ConfigurationConflict[];
+    conflicts?: ConfigurationConflict[];
     threeDItemsToHide: string[];
     threeDItemMappings: { [featureModelId: string]: Mapped3dItems };
     linkedConfigurationModels: LinkedConfigurationModel[];
